@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <meta name="copyright" content="MACode ID, https://www.macodeid.com/">
+  
+  <title> PORTFOLIO Yacine BENCHEHIDA </title>
+  
+  <link rel="shortcut icon" type="image/x-icon" href="../assets/Wifi.ico">
+  
+  <link rel="stylesheet" type="text/css" href="../assets/css/themify-icons.css">
+  
+  <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
+
+  <link rel="stylesheet" type="text/css" href="../assets/vendor/animate/animate.css">
+  
+  <link rel="stylesheet" type="text/css" href="../assets/vendor/owl-carousel/owl.carousel.css">
+  
+  <link rel="stylesheet" type="text/css" href="../assets/vendor/perfect-scrollbar/css/perfect-scrollbar.css">
+  
+  <link rel="stylesheet" type="text/css" href="../assets/vendor/nice-select/css/nice-select.css">
+
+  <link rel="stylesheet" type="text/css" href="../assets/vendor/fancybox/css/jquery.fancybox.min.css">
+  
+  <link rel="stylesheet" type="text/css" href="../assets/css/virtual.css">
+  
+  <link rel="stylesheet" type="text/css" href="../assets/css/minibar.virtual.css">
+</head>
+</head>
+<body class="theme-red">
+  
+  <!-- Back to top button -->
+  <div class="btn-back_to_top">
+    <span class="ti-arrow-up"></span>
+  </div>
+  
+ <div class="topbar-nav fixed-top" style=" margin : auto ; height: 7%">
+    <h3 class="ml-1">Middleware and Service</h3>
+    <button class="btn-fab toggle-menu mr-3"><span class="ti-menu"></span></button>
+  </div>
+  
+
+  
+ <!-- Mini bar -->
+  <div class="minibar">
+    <div class="header">
+      <div class="brand">
+        
+      </div>
+    </div>
+    <div class="content">
+      <ul class="main-menu">
+        <li class="menu-item active">
+          <!--<a href="index-2.html" class="menu-link"> 
+            <span class="icon ti-arrow-left"></span>
+            <span class="caption">Back</span>-->
+      <form>
+       <button class="menu-link" onclick="history.back()">Back</button>>
+      </form>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer">
+      <div class="social-menu">
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="container pt-5" style="margin : auto ; width: 87%;font-size:1.1em;;">
+    <h1 class="text-center fg-dark " style = "background: linear-gradient(to right, #36ecde, #000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;">Module Middleware and Service</h1>
+
+ <p class="fg-dark" style="text-align: justify"> Pour ce module <i> Middleware and Service</i>, nous avons suivi les cours suivants : 
+
+  <ul>
+    <li> <strong>Intergiciel pour les objets connectés</strong> avec une prise en main de <i>OM2M</i></li>
+    <li> <strong>Adaptabilité : Cloud et Gestion Autonomique</strong> avec une prise en main des concepts de <i>virtualisation et conteneurisation </i></li>
+    <li> <strong>Architecture de service</strong> pour gérer une classe autonome </i></li>
+  </ul> 
+
+</p>
+  <h2 class="fg-dark " style=" background: linear-gradient(to right, #36ecde, #000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;">Intergiciel pour les objets connectés </h2>
+  <h3 class="fg-dark " style=" background: linear-gradient(to right, #36ecde, #000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;margin-left: 3%;">1 - Présentation</h3>
+
+  <p class="fg-dark" style="text-align: justify"> Après avoir parcouru les différents protocoles, technologies et architecture pour l'IoT, nos travaux pratiques se sont concentrés sur MQTT (un protocole de messagerie de type publish/subscribe) et OM2M (un standard pour les communications de machine à machine). </p> 
+
+  <h3 class="fg-dark " style=" background: linear-gradient(to right, #36ecde, #000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;margin-left: 3%;">2 - Partie technique </h3>
+
+  <p class="fg-dark" style="text-align: justify"> Nous avons utilisé MQTT pour implémenter le cas d'utilisation suivant : nous connectons un capteur de luminosité, un bouton et une LED à une carte MCU ESP 8266 Node. Chaque fois que le bouton est pressé ou que la luminosité est inférieure à une valeur seuil, la LED doit s'allumer. Nous avons installé un Broker MQTT Mosquitto sur un PC Ubuntu connecté sur le même réseau Wi-Fi que la carte Node MCU (comme le montre la figure ci-dessous). </p>
+
+ <div id="om2m">
+    <img src="../assets/img/om2m.png" style="width: 60% ; height: auto ">
+    <figcaption><u><strong>Figure 1 </strong></u>- Architecture implémentée avec un Broker MQTT et un module NodeMCU </figcaption>
+ </div>
+
+ <p class="fg-dark" style="text-align: justify"><br>Nous avons utilisé l'implémentation open source d'Eclipse pour OM2M. En utilisant REST, nous avons organisé certaines ressources comme des lampes, des capteurs de température et de luminosité. OM2M a l'avantage de pouvoir avoir des serveurs sur différentes machines et de pouvoir les interconnecter. Il a également une manière très structurée d'organiser l'information.</p>
+
+ <p class="fg-dark" style="text-align: justify"> Enfin, nous avons fusionné ces deux travaux en utilisant Node-Red un outil de workflow qui peut aussi être utilisé pour faire des IU. Nous avons collecté des données en utilisant MQTT (valeur de luminosité), contrôlé des actionneurs en utilisant OM2M (lampes). <br><br>Nous avons créé une interface utilisateur qui montre les variations de la luminosité et l'état des lampes. Nous avons également utilisé les fonctionnalités de surveillance et de notification de Node-Red. Nous avons rassemblé tout notre travail dans un rapport écrit. La figure ci-dessous montre le type d'architecture que nous pourrions mettre en œuvre si la plupart des éléments ici n'étaient pas simulés.</p>
+
+
+
+
+
+  <p class="fg-dark" style="text-align: justify"><u><strong>Livrable </strong></u>:
+
+  <a href="../Middleware-and-Service/Middleware for the IoT.zip" class="btn btn-theme btn-rounded" target=""> Middleware for IoT</a>
+
+
+   <h2 class="fg-dark " style=" background: linear-gradient(to right, #36ecde, #000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;">Adaptabilité : Cloud et Gestion Autonomique</h2>
+
+  <h3 class="fg-dark " style=" background: linear-gradient(to right, #36ecde, #000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;margin-left: 3%;">1 - Présentation</h3>
+
+   <p class="fg-dark" style="text-align: justify"> Le but général de ce cours était d'améliorer la connaissance des concepts et des technologies pour les techniques de virtualisation. La virtualisation permet d'émuler un OS ou une application sur une machine hôte permettant l'allocation temporaire des ressources pour une utilisation spécifique. Son utilisation est de plus en plus fréquente dans le milieu professionnel professionnel car elle offre de nombreux avantages. Les environnements sont donc dynamiques et distribués. Il est dont nécessaire de comprendre le fonctionnement de la virtualisation, ses avantages et comment la mettre en place.</p>
+
+  <h3 class="fg-dark " style=" background: linear-gradient(to right, #36ecde, #000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;margin-left: 3%;">2 - Partie technique </h3>
+
+   <p class="fg-dark" style="text-align: justify"> Les objectifs étaient les suivants : 
+
+    <ul style="list-style-type: circle;"> 
+      <li> Découvrir toutes <strong>les méthodes de virtualisation</strong> </li>
+      <li> Reconnaître les <strong>différences fondamentales</strong> entre les deux principaux types d'hôtes de virtualisation, à savoir les <strong>machines virtuelles (VM)</strong> et les <strong>conteneurs (CT)</strong></li>
+      <li>  Exploiter <strong>le provisionnement</strong> de VMs VirtualBox, en mode NAT, et effectuer les configurations appropriées afin que les VMs puissent accéder et être accessibles par Internet.</li>
+      <li> Gérer le provisionnement des conteneurs <strong>Docker</strong>, et réaliser les configurations appropriées pour que les conteneurs puissent accéder et être accessibles par Internet.</li>
+      <li> Opérer le provisionnement correct des VMs avec <strong>OpenStack</strong> et gérer la connectivité du réseau.</li>
+      <li> Mettre en œuvre un <strong>outil d'orchestration simple </strong>afin d'approvisionner une application Web à deux niveaux utilisant des services node.js.</li>
+    </ul>
+
+    Vous trouverez un rapport illustrant tous ces concepts suivants. 
+  </p>
+
+
+  <p class="fg-dark" style="text-align: justify"><u><strong>Livrable </strong></u>:
+  <a href="../Middleware-and-Service/TP Cloud Hugo_Yacine.pdf" class="btn btn-theme btn-rounded" target="download">Cloud Rapport</a> </p>
+
+
+
+
+
+  <h2 class="fg-dark " style=" background: linear-gradient(to right, #36ecde, #000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;">Architecture de service </h2>
+
+  <h3 class="fg-dark " style=" background: linear-gradient(to right, #36ecde, #000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;margin-left: 3%;">1 - Présentation</h3>
+  <p class="fg-dark" style="text-align: justify"> Le but de ce cours était de <strong> développer une application Web </strong> (Proof-of-Concept) pour la gestion des salles de l'INSA . 
+    
+    Cette application doit permettre de fermer automatiquement les fenêtres, les portes, d'allumer le chauffage, d'éteindre les lumières ... etc. 
+    
+    Cette application s'appuie sur des services logiciels, des capteurs et des actionneurs.  
+  </p>
+  <h3 class="fg-dark " style=" background: linear-gradient(to right, #36ecde, #000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;margin-left: 3%;">2 - Partie technique </h3>
+  <p class="fg-dark" style="text-align: justify">Pendant ce cours, nous avons vu de nombreux concepts sur l'architecture orientée services (SOA - Service Oriented Architecture). 
+    SOA est un style de conception de logiciels dans lequel les services sont fournis aux autres composants par les composants de l'application, 
+    
+    par le biais d'un protocole de communication sur un réseau. Pendant les tutoriels, nous avons implémenté des services en utilisant SOAP et REST. 
+    
+    L'objectif de ce projet était de développer une application de gestion autonome des chambres en utilisant ces concepts : 
+    
+    <ul style="list-style-type: circle;"> 
+      <li><strong>récupérer</strong> les données des capteurs</li>
+      <li>analyser ces données pour <strong>permettre la prise de décision</strong> </li>
+    </ul> 
+
+  </p>
+
+  <p class="fg-dark" style="text-align: justify"></p>J'ai travaillé avec Sami Beyah et Hugo Le Belguet pour ce projet. 
+  </p>
+
+  <p class="fg-dark" style="text-align: justify">Vous trouverez ci-dessous mon rapport : </p>
+
+  <p class="fg-dark" style="text-align: justify"><u><strong>Livrable </strong></u>:
+  <a href="../Middleware-and-Service/Rapport-SOA-BEYAH-LEBELGUET-BENCHEHIDA-Finale.pdf" class="btn btn-theme btn-rounded" target="download">SOA Rapport</a> 
+   </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  
+  
+  <script src="../assets/js/jquery-3.5.1.min.js"></script>
+  
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  
+  <script src="../assets/vendor/owl-carousel/owl.carousel.min.js"></script>
+  
+  <script src="../assets/vendor/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+  
+  <script src="../assets/vendor/isotope/isotope.pkgd.min.js"></script>
+  
+  <script src="../assets/vendor/nice-select/js/jquery.nice-select.min.js"></script>
+  
+  <script src="../assets/vendor/fancybox/js/jquery.fancybox.min.js"></script>
+
+  <script src="../assets/vendor/wow/wow.min.js"></script>
+
+  <script src="../assets/vendor/animateNumber/jquery.animateNumber.min.js"></script>
+
+  <script src="../assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  
+  <script src="../assets/js/minibar-virtual.js"></script>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIA_zqjFMsJM_sxP9-6Pde5vVCTyJmUHM&callback=initMap"></script>
+
+</body>
+
+</html>
