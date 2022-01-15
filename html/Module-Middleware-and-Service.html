@@ -72,7 +72,7 @@
     </div>
   </div>
 
-  <div class="container pt-5" style="margin : auto ; width: 87%;font-size:1.1em;;">
+  <div class="container pt-5" style="margin : auto ; width: 87%;font-size:1.1em;">
     <h1 class="text-center fg-dark " style = "background: linear-gradient(to right, #36ecde, #000);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;">Module Middleware and Service</h1>
@@ -93,22 +93,40 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;margin-left: 3%;">1 - Présentation</h3>
 
-  <p class="fg-dark" style="text-align: justify"> Après avoir parcouru les différents protocoles, technologies et architecture pour l'IoT, nos travaux pratiques se sont concentrés sur MQTT (un protocole de messagerie de type publish/subscribe) et OM2M (un standard pour les communications de machine à machine). </p> 
+  <p class="fg-dark" style="text-align: justify"> Après avoir parcouru les différents protocoles, technologies et architecture pour l'IoT, nos travaux pratiques se sont concentrés sur <strong>MQTT</strong> 
+   
+    
+    (<i>un protocole de messagerie de type publish/subscribe</i>) et <strong>OM2M</strong>  (<i>un standard pour les communications de machine à machine</i>).
+ </p>
+
+
+   
+
+     
+      
+    
 
   <h3 class="fg-dark " style=" background: linear-gradient(to right, #36ecde, #000);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;margin-left: 3%;">2 - Partie technique </h3>
+  -webkit-text-fill-color: transparent;margin-left: 3%;"> 2 - Partie technique </h3>
 
-  <p class="fg-dark" style="text-align: justify"> Nous avons utilisé MQTT pour implémenter le cas d'utilisation suivant : nous connectons un capteur de luminosité, un bouton et une LED à une carte MCU ESP 8266 Node. Chaque fois que le bouton est pressé ou que la luminosité est inférieure à une valeur seuil, la LED doit s'allumer. Nous avons installé un Broker MQTT Mosquitto sur un PC Ubuntu connecté sur le même réseau Wi-Fi que la carte Node MCU (comme le montre la figure ci-dessous). </p>
+  <p class="fg-dark" style="text-align: justify"> Nous avons utilisé <strong>MQTT pour implémenter</strong> le cas d'utilisation suivant : nous connectons un capteur de luminosité, un bouton et une LED à une carte MCU ESP 8266 Node. Chaque fois que le bouton est pressé ou que la luminosité est inférieure à une valeur seuil, <strong>la LED doit s'allumer</strong>. Nous avons installé un Broker MQTT Mosquitto sur un PC Ubuntu connecté sur le même réseau Wi-Fi que la carte Node MCU (comme le montre la figure ci-dessous). </p>
 
  <div id="om2m">
-    <img src="../assets/img/om2m.png" style="width: 60% ; height: auto ">
+    <img src="../assets/img/om2m.png"  style="width: 60% ; height: auto ;  ">
     <figcaption><u><strong>Figure 1 </strong></u>- Architecture implémentée avec un Broker MQTT et un module NodeMCU </figcaption>
  </div>
 
- <p class="fg-dark" style="text-align: justify"><br>Nous avons utilisé l'implémentation open source d'Eclipse pour OM2M. En utilisant REST, nous avons organisé certaines ressources comme des lampes, des capteurs de température et de luminosité. OM2M a l'avantage de pouvoir avoir des serveurs sur différentes machines et de pouvoir les interconnecter. Il a également une manière très structurée d'organiser l'information.</p>
+ <p class="fg-dark" style="text-align: justify"><br>Nous avons utilisé l'implémentation open source d'Eclipse pour OM2M. En utilisant REST, nous avons organisé certaines ressources comme des lampes, des capteurs de température et de luminosité. OM2M a l'avantage de <strong>pouvoir avoir des serveurs</strong> sur différentes machines et de pouvoir les interconnecter. Il a également une manière très structurée d'organiser l'information.</p>
 
- <p class="fg-dark" style="text-align: justify"> Enfin, nous avons fusionné ces deux travaux en utilisant Node-Red un outil de workflow qui peut aussi être utilisé pour faire des IU. Nous avons collecté des données en utilisant MQTT (valeur de luminosité), contrôlé des actionneurs en utilisant OM2M (lampes). <br><br>Nous avons créé une interface utilisateur qui montre les variations de la luminosité et l'état des lampes. Nous avons également utilisé les fonctionnalités de surveillance et de notification de Node-Red. Nous avons rassemblé tout notre travail dans un rapport écrit. La figure ci-dessous montre le type d'architecture que nous pourrions mettre en œuvre si la plupart des éléments ici n'étaient pas simulés.</p>
+ <p class="fg-dark" style="text-align: justify"> Enfin, nous avons fusionné ces deux travaux en utilisant <strong>Node-Red un outil de workflow</strong> qui peut aussi être utilisé pour faire des IU. Nous avons collecté des données en utilisant MQTT (valeur de luminosité), contrôlé des actionneurs en utilisant OM2M (lampes). <br><br>Nous avons créé une interface utilisateur qui montre les variations de la luminosité et l'état des lampes. Nous avons également utilisé les fonctionnalités de surveillance et de notification de Node-Red. Nous avons rassemblé tout notre travail dans un rapport écrit. La figure ci-dessous montre le type d'architecture que nous pourrions mettre en œuvre si la plupart des éléments ici n'étaient pas simulés.
+</p>
+
+<p class="fg-dark" style="text-align: justify; border:3px dotted black;">Ainsi dans ce cours, j'ai développé des compétences sur les intergiciels et sur la manière d'interfacer différentes technologies. 
+  Ce module m’a ainsi permis de découvrir le standard oneM2M et les services Web de type REST qui sont tous deux utilisés dans l’IoT. Les TP m’ont permis de me rendre compte de la puissance de l’utilisation de ces technologies pour développer et interagir avec des réseaux de capteurs/actionneurs. 
+  Notamment le coté « générique » et « horizontal » du standard oneM2M qui lui permet de s’adapter à n’importe quel domaine d’application.
+</p> 
+  
 
 
 
@@ -127,7 +145,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;margin-left: 3%;">1 - Présentation</h3>
 
-   <p class="fg-dark" style="text-align: justify"> Le but général de ce cours était d'améliorer la connaissance des concepts et des technologies pour les techniques de virtualisation. La virtualisation permet d'émuler un OS ou une application sur une machine hôte permettant l'allocation temporaire des ressources pour une utilisation spécifique. Son utilisation est de plus en plus fréquente dans le milieu professionnel professionnel car elle offre de nombreux avantages. Les environnements sont donc dynamiques et distribués. Il est dont nécessaire de comprendre le fonctionnement de la virtualisation, ses avantages et comment la mettre en place.</p>
+   <p class="fg-dark" style="text-align: justify"> Le but général de ce cours était <strong>d'améliorer la connaissance des concepts et des technologies pour les techniques de virtualisation</strong>. La virtualisation permet <strong>d'émuler un OS</strong> ou une application sur une machine hôte permettant l'allocation temporaire des ressources pour une utilisation spécifique. Son utilisation est <strong>de plus en plus fréquente</strong> dans le milieu professionnel professionnel car elle offre de nombreux avantages. Les environnements sont donc <strong>dynamiques et distribués</strong>. Il est dont nécessaire de comprendre le fonctionnement de la virtualisation, ses avantages et comment la mettre en place.</p>
 
   <h3 class="fg-dark " style=" background: linear-gradient(to right, #36ecde, #000);
   -webkit-background-clip: text;
@@ -144,9 +162,16 @@
       <li> Mettre en œuvre un <strong>outil d'orchestration simple </strong>afin d'approvisionner une application Web à deux niveaux utilisant des services node.js.</li>
     </ul>
 
-    Vous trouverez un rapport illustrant tous ces concepts suivants. 
+    
   </p>
 
+  <p class="fg-dark" style="text-align: justify;border:3px dotted black; "> Avec plusieurs parties théoriques dans le laboratoire et dans les cours sur le concept de cloud computing, 
+    je suis maintenant capable de <strong>comprendre les concepts de base tels que la machine virtuelle et les conteneurs</strong>. Nous avons utilisé l'infrastructure en tant que service (IaaS) dans différents cours de laboratoire (la plateforme OpenStack permet l'IaaS en créant des instances VM), 
+    je suis maintenant capable d'utiliser <strong>le cloud pour mes futurs projets</strong>. Ainsi, nous avons déployé des VMs dans différentes plateformes telles que Virtual Box et OpenStack. 
+  </p>
+
+  <p class="fg-dark" style="text-align: justify">Vous trouverez un rapport illustrant tous ces concepts suivants. 
+  </p>
 
   <p class="fg-dark" style="text-align: justify"><u><strong>Livrable </strong></u>:
   <a href="../Middleware-and-Service/TP Cloud Hugo_Yacine.pdf" class="btn btn-theme btn-rounded" target="download">Cloud Rapport</a> </p>
@@ -185,10 +210,12 @@
 
   </p>
 
-  <p class="fg-dark" style="text-align: justify"></p>J'ai travaillé avec Sami Beyah et Hugo Le Belguet pour ce projet. 
+  <p class="fg-dark" style="text-align: justify; border:3px dotted black;">
+    La réalisation de ce module m’a ainsi permis d’acquérir de nouvelles compétences dans le domaine du middleware. 
+    Je suis maintenant capable de déployer une architecture de type REST ou SOAP afin de créer des services web et de créer des applications de haut niveau permettant de récupérer les données de capteurs, d’interagir avec des actionneurs et de définir et mettre en place des scénarios précis.
   </p>
 
-  <p class="fg-dark" style="text-align: justify">Vous trouverez ci-dessous mon rapport : </p>
+  <p class="fg-dark" style="text-align: justify">J'ai travaillé avec Sami Beyah et Hugo Le Belguet pour ce projet. Vous trouverez ci-dessous mon rapport : </p>
 
   <p class="fg-dark" style="text-align: justify"><u><strong>Livrable </strong></u>:
   <a href="../Middleware-and-Service/Rapport-SOA-BEYAH-LEBELGUET-BENCHEHIDA-Finale.pdf" class="btn btn-theme btn-rounded" target="download">SOA Rapport</a> 
