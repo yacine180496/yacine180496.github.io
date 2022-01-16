@@ -1434,7 +1434,7 @@ a:hover, a:active {
     text-align: center; 
 }
 
-#aime,#pin, #rn, #om2m, #keti,#award,#nb,#en{
+#aime,#pin, #rn, #om2m, #keti,#award,#nb,#en,#cycle{
   text-align: center;
 }
 
@@ -1467,6 +1467,15 @@ a:hover, a:active {
 #t1{
     margin-left: 7%; 
 }
+
+@media (min-width : 1500px) {
+    .container{
+        max-width: 1780px;
+    }
+}
+
+
+
 
 
 
