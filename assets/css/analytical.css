@@ -79,13 +79,13 @@ td, th {
 
 
 
-#togg1:hover, #togg2:hover, #togg3:hover, #togg4:hover{
+#togg1:hover, #togg2:hover, #togg3:hover, #togg4:hover, #togg5:hover{
   transform: scale(1.0);
   transition: all 0.5s ; 
   margin-left: 5%;
 }
 
-#cache,#cache2,#cache3,#cache4 {
+#cache,#cache2,#cache3,#cache4,#cache5 {
   display: none;
 }
 
