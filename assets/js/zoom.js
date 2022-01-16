@@ -1,10 +1,12 @@
 let togg1 = document.getElementById("togg1");
 let togg2 = document.getElementById("togg2");
 let togg3 = document.getElementById("togg3");
+let togg4 = document.getElementById("togg4");
 
 let d1 = document.getElementById("cache");
 let d2 = document.getElementById("cache2");
 let d3 = document.getElementById("cache3");
+let d4 = document.getElementById("cache4");
 
 
 togg1.addEventListener("click", () => {
@@ -31,7 +33,16 @@ function toggb(){
     }
 };
 
+function toggc(){
+    if(getComputedStyle(d4).display != "none"){
+      d4.style.display = "none";
+    } else {
+      d4.style.display = "block";
+    }
+};
+
 
 
 togg2.onclick=togg; 
 togg3.onclick=toggb; 
+togg4.onclick=toggc; 
