@@ -1483,6 +1483,18 @@ a:hover, a:active {
     } 
 }
 
+/*15.4 pouces */ 
+
+@media ( min-width : 800px){
+    .container{
+        max-width: 1150px ; 
+    } 
+}
+
+
+
+
+
 
 
 
