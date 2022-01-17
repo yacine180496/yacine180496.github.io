@@ -1468,24 +1468,48 @@ a:hover, a:active {
     margin-left: 7%; 
 }
 
+/* Grande taille */
 @media (min-width : 1500px) {
     .container{
         max-width: 1780px;
     }
 }
 
-@media ( min-width : 900px){
+/*15pouces*/
+@media ( min-width: 765px)  {
+
+    .container{
+        max-width: 860px ; 
+    } 
+}
+
+
+
+
+/*@media ( min-width : 900px){
 
     .container{
         max-width: 1480px ; 
     }
-}
+}*/
 
+
+/*14pouces
 @media ( min-width : 688px){
+    .container{
+        max-width: 1100px ; 
+    }
+}*/
+
+
+/*
+@media ( (min-width : 688px) and (max-width : 769px)  {
     .container{
         max-width: 1150px ; 
     }
-}
+}*/
+
+
 
 
 
