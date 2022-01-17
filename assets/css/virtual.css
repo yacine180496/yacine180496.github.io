@@ -1474,6 +1474,15 @@ a:hover, a:active {
     }
 }
 
+@media (max-width : 1500px){
+    .container{
+        max-width: 1100px; 
+    }
+}
+
+
+
+
 
 
 
