@@ -1474,11 +1474,17 @@ a:hover, a:active {
     }
 }
 
-@media( (min-width : 1500px) and (max-width : 1980px) ) {
+@media ( min-width : 900px){
+
     .container{
-        max-width: 1600px;
+        max-width: 1480px ; 
     }
 }
+
+
+
+
+
 
 
 
