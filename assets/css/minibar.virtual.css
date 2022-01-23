@@ -559,7 +559,7 @@
 .vg-footer {
     position: relative;
     display: block;
-    margin-left: 5em;
+   /* margin-left: 5em;*/
     padding: 50px 0;
     background-color: #171925;
     color: #9FA2AB;
